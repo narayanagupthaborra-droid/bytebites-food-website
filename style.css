@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container{
+   width:100%;
+   background-color:#F8F9FA;
+}
+
+.navcontainer{
+    width:100%;
+    background-color:#2E2E2E;
+    min-height:80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav{
+    width:100%;
+}
+
+#navlist{
+    width:100%;
+    /* font-size: 2.2rem; */
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.searchbar{
+    padding:6px 12px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+}
+
+#navlogo{
+    font-size:2rem;
+    font-weight:700;
+    color:white;
+    letter-spacing:1px;
+    transition: 0.3s;
+}
+#navlogo:hover{
+    transform:scale(1.15);
+    color:#FF6B35;
+}
+
+#navlogo span{
+    color:#FF6B35;
+}
+
+#items a{
+    position: relative;
+    gap: 40px;
+}
+
+#items a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-4px;
+    background:#FF6B35;
+    transition:0.3s;
+}
+
+#items a:hover::after{
+    width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+    font-size:1.2rem;
+    transition:0.3s;
+}
+
+a:hover{
+    color:#FF6B35;
+}
+body{
+    background-color:#F8F9FA;
+    background-image:
+    radial-gradient(circle,#e5e5e5 1px, transparent 1px);
+    background-size:25px 25px;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+footer{
+    background-color:#2E2E2E;
+    color:white;
+    margin-top:40px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-around;
+    padding:40px 20px;
+    flex-wrap:wrap;
+}
+
+.footer-logo h2{
+    font-size:1.8rem;
+    margin-bottom:10px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:white;
+    margin:5px 0;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#FF6B35;
+}
+
+.footer-contact p{
+    margin:5px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:15px;
+    background-color:#1d1d1d;
+    font-size:0.9rem;
+}
+.contentbox{
+    width:70%;
+    margin:auto;
+    background-color:#FFFFFF;
+    border-radius:15px;
+    padding:3rem;
+    box-shadow:0px 4px 20px rgba(0,0,0,0.15);
+    display:flex;
+    flex-direction:column;
+    gap:60px;
+    max-width: 1200px;
+}
+.recipe-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0px 6px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.recipe-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 35px rgba(0,0,0,0.2);
+}
+
+.rating{
+    color:#FFA500;
+    font-size:1.2rem;
+}
+.recipe-btn{
+    margin-top:15px;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    background:#FF6B35;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.recipe-btn:hover{
+    background:#e4572e;
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.leftbox{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+}
+
+.leftbox img{
+    width:380px;
+    height:380px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:transform 0.4s;
+}
+
+.leftbox:hover img{
+    transform:scale(1.08);
+}
+.rightbox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 20px;
+}
+.rightbox h2{
+    font-size:2.2rem;
+    color:#2E2E2E;
+}
+
+.rightbox h3{
+    margin-top:10px;
+    font-size:1.3rem;
+    color:#444;
+}
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nutrientsbox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.leftbox .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.3s;
+}
+
+.leftbox:hover .overlay{
+    opacity:1;
+}
+
+.overlay span{
+    color:white;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#FF6B35;
+    color:white;
+    border:none;
+    padding:12px 16px;
+    border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+#topBtn:hover{
+    background:#e4572e;
+    transform:scale(1.1);
+}
